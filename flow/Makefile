@@ -100,7 +100,7 @@ endif
 #-------------------------------------------------------------------------------
 # Proper way to initiate SHELL for make
 SHELL          ?= /bin/bash
-.SHELLFLAGS    = -o pipefail -c
+# .SHELLFLAGS    = -o pipefail -c
 
 #-------------------------------------------------------------------------------
 # Setup variables to point to root / head of the OpenROAD directory
