@@ -27,6 +27,7 @@ Access the wsl ubuntu terminal
 	- tcl
 	- libffi-devel
 	- padas
+- Install KLayout `https://www.klayout.de/` OR use `sudo apt install klayout`
 
 - Clone and Build
 - Navigate to root directory openRoad-flow-scripts  : `cd ../../`
