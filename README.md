@@ -6,6 +6,45 @@ OpenROAD Flow is a full RTL-to-GDS flow built entirely on open-source tools.
 The project aims for automated, no-human-in-the-loop digital circuit design
 with 24-hour turnaround time.
 
+## Install on Windows Locally using WSL
+
+### WSL Installation 
+- Download WSL for windows [documentation here](https://docs.microsoft.com/en-us/windows/wsl/install).
+- Install UBUNTU from windows store
+
+### Downloading and building openRoad-flow-scripts
+
+Access the wsl ubuntu terminal
+- Clone this fork of the open-road-flow-scripts repo :
+`git clone https://github.com/phadkesharan/OpenROAD-flow-scripts`
+
+- Download Dependencies
+`cd OpenROAD-flow-scripts/tools/OpenROAD`
+`./etc/DependencyInstaller.sh -dev`
+
+- Install following python packages using pip
+	- time
+	- tcl
+	- libffi-devel
+	- padas
+
+- Clone and Build
+- Navigate to root directory openRoad-flow-scripts  : `cd ../../`
+- Build `./build_openroad.sh --local`
+
+### Verifying installation
+
+- setup environment variables : `source ./setup_env.sh`
+- yosys: `yosys -help`
+- openroad: `openroad -help`
+
+
+### Running Complete flow on Designs
+- Navigate to flow directory `cd flow`
+- Copy the path to config file for prefered design from the makefile 
+	Eg `./designs/sky130hd/ibex/config.mk`
+- Run the make with the config path : `make DESIGN_CONFIG=<config file path>`
+	Eg : `make DESIGN_CONFIG=./designs/sky130hd/ibex/config.mk`
 ## Using the Flow
 
 - See the OpenROAD [documentation here](https://openroad.readthedocs.io/en/latest/).
@@ -54,3 +93,4 @@ The flow relies on several tools, platforms and designs that each have their own
 - Find the tool license at: `OpenROAD-flow-scripts/tools/{tool}/` or `OpenROAD-flow-scripts/tools/OpenROAD/src/{tool}/`.
 - Find the platform license at: `OpenROAD-flow-scripts/flow/platforms/{platform}/`.
 - Find the design license at: `OpenROAD-flow-scripts/flow/designs/src/{design}/`.
+
