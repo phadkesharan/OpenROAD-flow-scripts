@@ -4,10 +4,10 @@
 tools/install
 
 # Test working directories
-flow/results
-flow/logs
-flow/reports
-flow/objects
+# flow/results
+# flow/logs
+# flow/reports
+# flow/objects
 flow/tech
 
 # Tar archives
