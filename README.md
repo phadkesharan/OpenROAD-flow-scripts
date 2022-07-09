@@ -16,7 +16,7 @@ with 24-hour turnaround time.
 
 Access the wsl ubuntu terminal
 - Clone this fork of the open-road-flow-scripts repo :
-`git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts`
+`git clone --recursive https://github.com/phadkesharan/OpenROAD-flow-scripts.git`
 
 - Download Dependencies
 `cd OpenROAD-flow-scripts/tools/OpenROAD`
